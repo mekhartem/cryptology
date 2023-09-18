@@ -1,4 +1,5 @@
 import enums.AlgorithmBits;
+import service.algoritm.Algorithm;
 import service.algoritm.RSA;
 
 import java.math.BigInteger;
@@ -9,7 +10,7 @@ public class Dispatcher {
     public static final String MESSAGE = "Hello world";
 
     public static void main(String[] args) {
-        var rsa = new RSA(AlgorithmBits.BITS_1024, new BigInteger(PUBLIC_KEY));
+        Algorithm rsa = new RSA(AlgorithmBits.BITS_1024, new BigInteger(PUBLIC_KEY));
 
         String encryptedMessage = rsa.encrypt(MESSAGE);
         String decryptedMessage = rsa.decrypt(encryptedMessage);
