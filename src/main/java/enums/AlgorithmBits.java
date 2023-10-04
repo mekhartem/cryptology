@@ -7,6 +7,7 @@ import lombok.Getter;
 @AllArgsConstructor
 public enum AlgorithmBits {
 
+    BITS_256(256),
     BITS_1024(1024),
     BITS_2048(2048),
     BITS_3072(3072),
