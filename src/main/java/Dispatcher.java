@@ -1,13 +1,13 @@
 import enums.AlgorithmBits;
 import service.algoritm.Algorithm;
-import service.algoritm.ElGamal;
+import service.algoritm.Shamir;
 
 public class Dispatcher {
 
     public static final String MESSAGE = "Hello world";
 
     public static void main(String[] args) {
-        Algorithm algorithm = new ElGamal(AlgorithmBits.BITS_256);
+        Algorithm algorithm = new Shamir(AlgorithmBits.BITS_1024);
 
         String encryptedMessage = algorithm.encrypt(MESSAGE);
         String decryptedMessage = algorithm.decrypt(encryptedMessage);
