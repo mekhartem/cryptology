@@ -1,4 +1,4 @@
-package service.algoritm;
+package service.verify;
 
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
 
@@ -15,13 +15,15 @@ public class EllipticCurveExample {
         keyPairGenerator.initialize(new ECGenParameterSpec("secp256r1"));
         KeyPair keyPair = keyPairGenerator.generateKeyPair();
 
-        byte[] dataToSign = "Hello from EllipticCurve".getBytes();
+        String msg = "Hello world";
+        byte[] dataToSign = msg.getBytes();
         Signature signature = Signature.getInstance("SHA256withECDSA", "BC");
         signature.initSign(keyPair.getPrivate());
         signature.update(dataToSign);
         byte[] signatureBytes = signature.sign();
         System.out.println("Signature: " + bytesToHex(signatureBytes));
 
+        System.out.println("Public key: " + keyPair.getPublic());
         signature.initVerify(keyPair.getPublic());
         signature.update(dataToSign);
         boolean isSignatureValid = signature.verify(signatureBytes);

@@ -1,7 +1,6 @@
 package service.algoritm;
 
 import enums.AlgorithmBits;
-import service.Algorithm;
 
 import java.math.BigInteger;
 import java.security.SecureRandom;
