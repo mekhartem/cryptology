@@ -1,5 +1,5 @@
 import enums.AlgorithmBits;
-import service.algoritm.Algorithm;
+import service.Algorithm;
 import service.algoritm.Shamir;
 
 public class Dispatcher {

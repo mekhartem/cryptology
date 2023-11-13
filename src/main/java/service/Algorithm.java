@@ -1,4 +1,4 @@
-package service.algoritm;
+package service;
 
 public interface Algorithm {
     String encrypt(String message);
