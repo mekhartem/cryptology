@@ -7,7 +7,7 @@ public class RSAVerifySignature {
     public static void main(String[] args) throws Exception {
         KeyPair keyPair = generateKeyPair();
 
-        String dataToSign = "Hello, RSA!";
+        String dataToSign = "Mikh Artem";
 
         byte[] signature = signData(dataToSign, keyPair.getPrivate());
 
