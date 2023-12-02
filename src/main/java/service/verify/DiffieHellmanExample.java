@@ -40,7 +40,7 @@ public class DiffieHellmanExample {
             System.out.println("Secret the same!");
             System.out.println("Secret: " + bytesToHex(secretKeyA));
         } else {
-            System.out.println("Invalid secret!.");
+            System.out.println("Invalid secret!");
         }
     }
 
